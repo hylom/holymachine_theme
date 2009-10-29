@@ -36,22 +36,27 @@ a:hover { text-decoration: underline; }
           margin: 0;
           }
 
+/* body */
+#body { 
+        display: table-tow;
+        }
+
 /* contents */
 #content {
-           margin-right: 324px;
-           padding: 0 12px 0 12px;
+           display: table-cell;
+           padding: 0 12px;
            border-right: 1px solid;
            }
 
 /* sidebar */
 #sidebar {
+           display: table-cell;
            width: 300px;
            padding: 0 12px;
-           float: right;
            }
 
 /* footer */
 #footer {
           border-top: 1px solid;
-          clear: both;
+          padding: 0 12px;
           }
