@@ -33,13 +33,8 @@ if ( empty($withcomments) && !is_single() ) {
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div id="page">
-
 
 <div id="header" role="banner">
-	<div id="headerimg">
-		<h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-		<div class="description"><?php bloginfo('description'); ?></div>
-	</div>
-</div>
-<hr />
+    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+    <div class="description"><?php bloginfo('description'); ?></div>
+</div><!-- end of header -->
