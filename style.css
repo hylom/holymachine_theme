@@ -20,8 +20,9 @@ Tags: hylom, hylom.net, holymachine
 
 /* global rules */
 div { margin: 0; padding: 0; }
-body { margin:0; }
-h1, h2, h3, h4, h5, h6 { margin-top: 0; }
+body { margin:0; background-color: #A8B1C1; color: #303030;}
+h1, h2, h3, h4, h5, h6,
+ul, ol, li  { margin-top: 0; }
 a { text-decoration: none; }
 a:hover { text-decoration: underline; }
 
@@ -31,32 +32,131 @@ a:hover { text-decoration: underline; }
 
 /* header */
 #header {
-          border-bottom: 1px solid;
-          padding: 0 4px;
-          margin: 0;
+          background-position: 100% 20px;
+          background-image: url("http://localhost/~hylom/wp/wp-content/themes/holymachine/images/baseboard.jpg");
+          background-repeat: no-repeat;
+          background-color: white;
+          min-height: 138px;
+          background-color: #A8B1C1;
           }
 
+#header_text { }
+
+#header_text span { display: none; }
+
+#dh_logo {
+           position: absolute;
+           top: 0;
+           left: 0;
+           z-index: 10;
+           background-image: url("http://localhost/~hylom/wp/wp-content/themes/holymachine/images/circle_logo.png");
+           background-repeat: no-repeat;
+           height: 164px;
+           width: 204px;
+           padding-top: 20px;
+           padding-left: 10px;
+           }
+
+#dh_logo h1 a {
+                display: block;
+                height: 120px;
+                width: 170px;
+                text-indent: -5000px;
+}
+
+
 /* body */
-#body { 
-        display: table-tow;
-        }
+#body {
+        background-image: url("http://localhost/~hylom/wp/wp-content/themes/holymachine/images/back_grad.png");
+        background-repeat: no-repeat;
+}
 
 /* contents */
 #content {
-           display: table-cell;
-           padding: 0 12px;
-           border-right: 1px solid;
+           margin-left: 20px;
+           margin-right: 340px;
+           /*padding: 0 20px;*/
+           /*background: #FAFAFA;*/
            }
+
+#top_menu {
+            width: 100%;
+            background: #FAFAFA;
+            text-align: right;
+            height: 46px;
+            }
+
+#top_menu ul {
+               list-style-type: none;
+               display: block;
+               }
+
+#top_menu li {
+               display: inline;
+               margin-right: 0.5em;
+               font-size: 80%;
+               }
+
+#stories { margin-top: 10px; }
+#stories div.entry-body { 
+                          font-size: 92%;
+                          line-height: 150%;
+                          margin-top: 30px;
+                          }
+
+#stories h3 {
+              border-style: none none solid none;
+              border-width: 1px;
+              border-color: #3366CC;
+              margin: 0 -20px;
+              padding: 4px 20px;
+              }
+
+#stories h3 a { color: #404040; }
+#stories div.date { text-align: right; font-size: 80%; }
+#stories div.hentry {
+                      background: #FAFAFA;                      
+                      padding: 0 20px 5px;
+                      margin: 10px 0;
+                      }
+
+#stories div.navigation {
+                          background: #FAFAFA;                      
+                          padding: 0 20px;
+                          margin: 10px 0 0;
+                          text-align: center;
+                          }
+#stories div.navigation span { padding: 0 24px; }
 
 /* sidebar */
 #sidebar {
-           display: table-cell;
+           position: absolute;
+           top: 138px;
+           right: 20px; 
            width: 300px;
-           padding: 0 12px;
+           background: #FAFAFA;
+           margin: 0
+           font-size: 90%;
            }
+
+#sidebar h2 { font-size: 100%; margin-bottom: 4px;}
+#sidebar h3 { font-size: 100%; margin-bottom: 4px;}
+
+#sidebar div.sidebar_text { 
+                            padding: 0 20px 0 10px;
+                            margin-bottom: 20px;
+                            }
+#sidebar ul {
+              list-style-type: none;
+              padding-left: 20px;
+              font-size: 90%;
+              }
+
 
 /* footer */
 #footer {
-          border-top: 1px solid;
-          padding: 0 12px;
+          font-size: 70%;
+          color: #505050;
+          padding: 40px 20px 0;
           }
+

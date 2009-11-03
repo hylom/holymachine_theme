@@ -35,6 +35,13 @@ if ( empty($withcomments) && !is_single() ) {
 <body <?php body_class(); ?>>
 
 <div id="header" role="banner">
+
+  <div id="header_text">
+    <span>Let's hack everything, everywhere, everyone.</span>
+  </div>
+
+  <div id="dh_logo">
     <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
-    <div class="description"><?php bloginfo('description'); ?></div>
+  </div>
+
 </div><!-- end of header -->
