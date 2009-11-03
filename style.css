@@ -33,7 +33,7 @@ a:hover { text-decoration: underline; }
 /* header */
 #header {
           background-position: 100% 20px;
-          background-image: url("http://localhost/~hylom/wp/wp-content/themes/holymachine/images/baseboard.jpg");
+          background-image: url("images/baseboard.jpg");
           background-repeat: no-repeat;
           background-color: white;
           min-height: 138px;
@@ -49,7 +49,7 @@ a:hover { text-decoration: underline; }
            top: 0;
            left: 0;
            z-index: 10;
-           background-image: url("http://localhost/~hylom/wp/wp-content/themes/holymachine/images/circle_logo.png");
+           background-image: url("images/circle_logo.png");
            background-repeat: no-repeat;
            height: 164px;
            width: 204px;
@@ -67,7 +67,7 @@ a:hover { text-decoration: underline; }
 
 /* body */
 #body {
-        background-image: url("http://localhost/~hylom/wp/wp-content/themes/holymachine/images/back_grad.png");
+        background-image: url("images/back_grad.png");
         background-repeat: no-repeat;
 }
 
