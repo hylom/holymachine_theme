@@ -1,71 +1,72 @@
 <?php
-/**
- * @package WordPress
- * @subpackage Default_Theme
- */
+   /**
+   * @package WordPress
+   * @subpackage holymachine_Theme
+   */
+   get_header();
+   ?>
 
-get_header();
-?>
+<div id="body">
+  <div id="content" role="main">
 
-	<div id="content" class="widecolumn" role="main">
+    <?php include (TEMPLATEPATH . '/mainmenu.php'); ?>
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+    <h2 class="hidden">コンテンツ</h2>
+    <div id="stories">
+      <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<div class="navigation">
-			<div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
-			<div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
-		</div>
-
-		<div <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<h2><?php the_title(); ?></h2>
-
-			<div class="entry">
-				<?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
-
-				<?php wp_link_pages(array('before' => '<p><strong>' . __('Pages:', 'kubrick') . '</strong> ', 'after' => '</p>', 'next_or_number' => 'number')); ?>
-				<?php the_tags( '<p>' . __('Tags:', 'kubrick') . ' ', ', ', '</p>'); ?>
-
-				<p class="postmetadata alt">
-					<small>
-						<?php /* This is commented, because it requires a little adjusting sometimes.
-							You'll need to download this plugin, and follow the instructions:
-							http://binarybonsai.com/wordpress/time-since/ */
-							/* $entry_datetime = abs(strtotime($post->post_date) - (60*120)); $time_since = sprintf(__('%s ago', 'kubrick'), time_since($entry_datetime)); */ ?>
-						<?php printf(__('This entry was posted %1$s on %2$s at %3$s and is filed under %4$s.', 'kubrick'), $time_since, get_the_time(__('l, F jS, Y', 'kubrick')), get_the_time(), get_the_category_list(', ')); ?>
-						<?php printf(__("You can follow any responses to this entry through the <a href='%s'>RSS 2.0</a> feed.", "kubrick"), get_post_comments_feed_link()); ?> 
-
-						<?php if ( comments_open() && pings_open() ) {
-							// Both Comments and Pings are open ?>
-							<?php printf(__('You can <a href="#respond">leave a response</a>, or <a href="%s" rel="trackback">trackback</a> from your own site.', 'kubrick'), trackback_url(false)); ?>
-
-						<?php } elseif ( !comments_open() && pings_open() ) {
-							// Only Pings are Open ?>
-							<?php printf(__('Responses are currently closed, but you can <a href="%s" rel="trackback">trackback</a> from your own site.', 'kubrick'), trackback_url(false)); ?>
-
-						<?php } elseif ( comments_open() && !pings_open() ) {
-							// Comments are open, Pings are not ?>
-							<?php _e('You can skip to the end and leave a response. Pinging is currently not allowed.', 'kubrick'); ?>
-
-						<?php } elseif ( !comments_open() && !pings_open() ) {
-							// Neither Comments, nor Pings are open ?>
-							<?php _e('Both comments and pings are currently closed.', 'kubrick'); ?>
-
-						<?php } edit_post_link(__('Edit this entry', 'kubrick'),'','.'); ?>
-
-					</small>
-				</p>
-
-			</div>
-		</div>
-
-	<?php comments_template(); ?>
-
-	<?php endwhile; else: ?>
-
-		<p><?php _e('Sorry, no posts matched your criteria.', 'kubrick'); ?></p>
-
-<?php endif; ?>
-
+      <div class="navigation rounding">
+	<div class="navigation_inner rounding">
+	  <div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
+	  <div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
 	</div>
+      </div>
+
+
+      <div <?php post_class("rounding_top"); ?> id="post-<?php the_ID(); ?>">
+	<div class="entry_inner rounding_top">
+
+	<h3><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'kubrick'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h3>
+
+	<div class="date"><span><?php the_date(); ?> <?php the_time(); ?></span></div>
+	
+	<div class="entry">
+	  <?php the_content('<p class="serif">' . __('Read the rest of this entry &raquo;', 'kubrick') . '</p>'); ?>
+	</div><!-- end of entry -->
+ 
+	<p class="entry-metadata">
+	  <?php the_category(" ", "multiple"); echo(" > "); ?>
+	  <?php the_tags("", " ", ""); ?>
+	  | <?php edit_post_link("編集", '', ' | '); ?>
+	  <?php printf('<a href="%s">コメントRSS</a>', get_post_comments_feed_link()); ?>
+	  | <?php comments_popup_link("コメントを付ける", "コメントを見る", "コメントを見る", "", "コメント禁止" ); ?>
+	  <?php if ( pings_open() ) { ?>
+	  | <?php printf('<a href="%s" rel="trackback">トラックバックURL</a>', trackback_url(false)) ?>
+	  <?php } ?>
+	</p>
+	
+	</div>
+      </div><!-- end of entry -->
+
+      <?php comments_template(); ?>
+
+      <div class="navigation rounding">
+	<div class="navigation_inner rounding">
+	  <div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
+	  <div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
+	</div>
+      </div>
+      
+
+      <?php endwhile; else: ?>
+      
+      <p><?php _e('Sorry, no posts matched your criteria.', 'kubrick'); ?></p>
+      
+      <?php endif; ?>
+
+    </div><!-- end of stories -->
+  </div><!-- end of content -->
+  <?php get_sidebar(); ?>
+</div><!-- end of body -->
 
 <?php get_footer(); ?>

@@ -1,48 +1,59 @@
 <?php
-/**
- * @package WordPress
- * @subpackage Default_Theme
- */
+   /**
+   * @package WordPress
+   * @subpackage holymachine_Theme
+   */
+   
+   get_header(); ?>
 
-get_header(); ?>
+<div id="body">
+  <div id="content" role="main">
 
-	<div id="content" class="narrowcolumn" role="main">
+    <?php include (TEMPLATEPATH . '/mainmenu.php'); ?>
 
-	<?php if (have_posts()) : ?>
+    <div id="stories">
+      <div class="entry rounding">
+	<div class="entry_inner rounding">
+	  <h3>検索結果</h3>
 
-		<h2 class="pagetitle"><?php _e('Search Results', 'kubrick'); ?></h2>
+	  <?php if (have_posts()) : ?>
 
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'kubrick')) ?></div>
-			<div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'kubrick')) ?></div>
-		</div>
+	  <div class="search_navigation">
+	    <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'kubrick')) ?></div>
+	    <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'kubrick')) ?></div>
+	  </div>
+
+	  <dl id="search_result">
+	    <?php while (have_posts()) : the_post(); ?>
+	    <dt id="post-<?php the_ID(); ?>">
+	      <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'kubrick'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a>
+	      <small>（<?php the_time('Y年Fj日') ?>）</small>
+	    </dt>
+	    <dd>
+		<?php the_tags("タグ：", ', ', '<br />'); ?>
+		<?php printf('カテゴリ：%s', get_the_category_list(', ')); ?>
+		| <?php edit_post_link("編集", '', ' | '); ?>
+		<?php comments_popup_link("コメントなし", "1 コメント", "%コメント", '', "コメント禁止" ); ?>
+	    </dd>
+	    <?php endwhile; ?>
+	  </dl>
+	  
+	  <div class="search_navigation">
+	    <div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'kubrick')) ?></div>
+	    <div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'kubrick')) ?></div>
+	  </div>
+	  
+	  <?php else : ?>
+	  キーワードが見つかりませんでした。
+	  <?php endif; ?>
+	  
+	</div><!-- end of entry_inner -->
+      </div><!-- end of entry -->
+    </div><!-- end of stories -->
+    <?php get_sidebar(); ?>
+    
+  </div><!-- end of content -->
+  <?php get_footer(); ?>
+</div><!-- end of body -->
 
 
-		<?php while (have_posts()) : the_post(); ?>
-
-			<div <?php post_class(); ?>>
-				<h3 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php printf(__('Permanent Link to %s', 'kubrick'), the_title_attribute('echo=0')); ?>"><?php the_title(); ?></a></h3>
-				<small><?php the_time('l, F jS, Y') ?></small>
-
-				<p class="postmetadata"><?php the_tags(__('Tags:', 'kubrick') . ' ', ', ', '<br />'); ?> <?php printf(__('Posted in %s', 'kubrick'), get_the_category_list(', ')); ?> | <?php edit_post_link(__('Edit', 'kubrick'), '', ' | '); ?>  <?php comments_popup_link(__('No Comments &#187;', 'kubrick'), __('1 Comment &#187;', 'kubrick'), __('% Comments &#187;', 'kubrick'), '', __('Comments Closed', 'kubrick') ); ?></p>
-			</div>
-
-		<?php endwhile; ?>
-
-		<div class="navigation">
-			<div class="alignleft"><?php next_posts_link(__('&laquo; Older Entries', 'kubrick')) ?></div>
-			<div class="alignright"><?php previous_posts_link(__('Newer Entries &raquo;', 'kubrick')) ?></div>
-		</div>
-
-	<?php else : ?>
-
-		<h2 class="center"><?php _e('No posts found. Try a different search?', 'kubrick'); ?></h2>
-		<?php get_search_form(); ?>
-
-	<?php endif; ?>
-
-	</div>
-
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>

@@ -6,6 +6,7 @@
 ?>
 
 <div id="footer" role="contentinfo">
+<div id="footer_inner">
   <!--
       If you'd like to support WordPress, having the "powered by" link somewhere
       on your blog is the best way; it's our only promotion or advertising. 
@@ -27,6 +28,7 @@
        <?php printf(__('%d queries. %s seconds.', 'kubrick'), get_num_queries(), timer_stop(0, 3)); ?>
        -->
 
+</div>
 </div><!-- end of footer -->
 
 <?php wp_footer(); ?>
