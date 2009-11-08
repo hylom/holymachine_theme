@@ -54,10 +54,9 @@ a:hover { text-decoration: underline; }
  * header
  */
 #header {
-    background-position: 100% 20px;
+    background-position: 0 20px;
     background-image: url("images/baseboard.jpg");
     background-repeat: no-repeat;
-    background-color: white;
     min-height: 138px;
     background-color: #A8B1C1;
 }
