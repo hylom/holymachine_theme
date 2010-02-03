@@ -25,16 +25,19 @@ div.entry_inner div.aligncenter {
     margin-left: auto;
     margin-right: auto;
 }
+
 div.entry_inner div.wp-caption {
     border: 1px solid #aaaaaa;
     padding: 5px;
     background: #ffffff;
     margin-bottom: 1em;
 }
+
 div.entry_inner div.wp-caption img {
     margin: 0 5px;
     padding: 0;
 }
+
 div.entry_inner div.wp-caption p {
     font-size: 80%;
     line-height: 110%;
@@ -165,11 +168,22 @@ a:hover { text-decoration: underline; }
     border-width: 1px;
     border-color: #3366CC;
     margin: 0 -20px;
-    padding: 0 20px;
+    padding: 6px 20px 2px;
 }
 
-#stories h3 a { color: #404040; }
+p.entry-metadata {
+    font-size: 80%;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+p.entry-metadata a.more{
+    font-size: 120%;
+}
+
+#stories h3 a { color: #404040; margin: 4px 0;}
 #stories div.date { text-align: right; font-size: 80%; }
+#stories div.tags { font-size: 80%; float: left;}
 
 #stories div.hentry {
     background: rgba(100,100,100,0.5);
