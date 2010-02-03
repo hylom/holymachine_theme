@@ -22,7 +22,7 @@
 	  <div class="tags">
 	    <span>
 	      <?php edit_post_link("編集", '[', ']'); ?>
-	      <?php the_tags("[", " ", "]"); ?>
+	      <?php the_tags("[", "] [", "]"); ?>
 	    </span>
 	  </div>
 
