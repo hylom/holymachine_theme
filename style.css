@@ -248,6 +248,13 @@ p.entry-metadata a.more{
     padding-left: 20px;
     font-size: 90%;
 }
+#wp-calendar{ 
+    text-align: center;
+    margin: 0 auto;
+    width: 260px;
+    padding: 2px 10px;
+    border: 1px solid #A8B1C1;
+}
 
 
 /*

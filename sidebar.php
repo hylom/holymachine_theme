@@ -19,10 +19,21 @@
 	   <p>A little something about you, the author. Nothing lengthy, just an overview.</p>
 	 </li>
 	 -->
-    <div class="sidebar_archives sidebar_text">
-      <h2>過去の記事</h2>
+    <div class="sidebar_calendar sidebar_text">
+      <?php get_calendar(false); ?>
+    </div>
+
+    <div class="sidebar_resent sidebar_text">
+      <h2>最近の記事</h2>
       <ul>
-	<?php wp_get_archives('type=monthly'); ?>
+	<?php wp_get_archives('type=postbypost&limit=10'); ?>
+      </ul>
+    </div>
+
+    <div class="sidebar_archives sidebar_text">
+      <h2>過去の記事（過去12か月分）</h2>
+      <ul>
+	<?php wp_get_archives('type=monthly&limit=12'); ?>
       </ul>
     </div>
 
@@ -31,6 +42,14 @@
       <ul>
 	<?php wp_list_categories('show_count=1&title_li='); ?>
       </ul>
+    </div>
+
+    <div class="sidebar_categories sidebar_text">
+      <h2>タグ</h2>
+      <ul>
+	<?php wp_tag_cloud('smallest=10&largest=10&orderby=count&order=DESC'); ?>
+      </ul>
+    </div>
 
     <div class="sidebar_tools sidebar_text">
       <h2>ツール</h2>
