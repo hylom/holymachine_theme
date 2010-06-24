@@ -19,6 +19,11 @@
 	   <p>A little something about you, the author. Nothing lengthy, just an overview.</p>
 	 </li>
 	 -->
+    <div class="sidebar_profile sidebar_text">
+      <h2 class="hidden">About</h2>
+      <p>ライター/エディター/プログラマー/Webディレクター、hylomのブログです。ご興味のある方は<a href="http://twitter.com/hylom">つぶやき</a>や<a href="http://sourceforge.jp/magazine/search?tid=209">執筆記事</a>などもどうぞ。</p>
+    </div>
+
     <div class="sidebar_calendar sidebar_text">
       <?php get_calendar(false); ?>
     </div>
@@ -60,6 +65,63 @@
       </ul>
     </div>
 
+    <div class="sidebar_freesoftwares sidebar_text">
+
+	  <h2>愛用するフリーソフトウェア</h2>
+
+	  <h3>Windows向け：</h3>
+	  <dl>
+		<dt><a href="http://sourceforge.jp/projects/ttssh2/">Tera Term</a></dt>
+		<dd>　Windows用のSSHクライアント機能付きターミナルエミュレータ。Windowsで作業する場合に必須。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/winscp/">WinSCP</a></dt>
+		<dd>　SCP/SFTP/FTPS対応クライアント。遠隔サーバーとのファイル交換などに必須。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/tortoisesvn/">TortoiseSVN</a></dt>
+		<dd>　バージョン管理システムSubversionのWindows用クライアント。使用頻度が下がり、コマンドを忘れ気味なのでGUIは便利。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/smplayer/">smplayer</a></dt>
+		<dd>　とりあえずだいたいのファイルを何も考えずに再生できるマルチメディアプレーヤー。UIも必要十分。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/pdfcreator/">PDFCreator</a></dt>
+		<dd>　PDF作成ツール。日本語対応のはずだけど日本語UIは相変わらず終わっている感じなので英語UIでの使用をおすすめ。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/clamwin/">ClamWin Free Antivirus</a></dt>
+		<dd>　ウイルス対策ソフト。やばそうなファイルはこれでチェック。常駐しないので軽いし。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/mingw/">MinGW</a></dt>
+		<dd>　PerlやMake、grepなどUNIX関連ツールを環境を汚さずに簡単にインストールできて便利。</dd>
+
+		<dt><a href="http://sourceforge.jp/projects/flac/">FLAC</a></dt>
+		<dd>　CD音源をリッピング後劣化させずに管理するのに使用。しかしリッピングが面倒で進んでいない……。</dd>
+
+
+		<dt><a href="http://sourceforge.jp/projects/ffdshow-tryout/">ffdshow</a></dt>
+		<dd>　コーデック集。これを入れておけば、とりあえずだいたいの動画をWindows Media Playerで再生可能に。</dd>
+		  
+		<dt><a href="http://sourceforge.jp/projects/ntemacsjp/">NTEmacs JP</a></dt>
+		<dd>　テキストエディタ。コード書きの必須ツール。無いと仕事になりません。</dd>
+	  </dl>
+	  
+	  <h3>Mac OS X向け：</h3>
+	  <dl>
+		<dt><a href="http://cyberduck.ch/">Cyberduck</a></dt>
+		<dd>　SCP/FTP/SFTP/WebDAVなどに対応するGUIのファイル転送ツール。ドラッグ＆ドロップでファイル転送するのに便利。</dd>
+		
+		<dt><a href="http://sourceforge.jp/projects/macwiki/">Carbon Emacs</a></dt>
+		<dd>　テキストエディタ。やっぱり無いと仕事にならない。</dd>
+		
+		<dt><a href="http://www.perian.org/">Perian</a></dt>
+		<dd>　コーデック集。これをインストールしておくだけで、ほとんどの動画ファイルがQuickTime Playerで再生可能＆QuickLookで閲覧可能に。</dd>
+		
+		<dt><a href="http://www.mimikaki.net/">mi</a></dt>
+		<dd>　Mac OS Xよりも前から使っているエディタ。多機能＆そこそこ軽量。</dd>
+		
+	  </dl>
+	</div>
+
+
     <?php endif; ?>
-</div><!-- end of sidebar -->
 </div>
+</div><!-- end of sidebar -->
+
