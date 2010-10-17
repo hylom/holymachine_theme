@@ -41,7 +41,7 @@ if ( empty($withcomments) && !is_single() ) {
   </div>
 
   <div id="dh_logo">
-    <h1><a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a></h1>
+    <a href="<?php echo get_option('home'); ?>/"><?php bloginfo('name'); ?></a>
   </div>
 
 </div><!-- end of header -->

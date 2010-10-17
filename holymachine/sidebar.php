@@ -4,6 +4,7 @@
  * @subpackage holymachine_Theme
  */
 ?>
+<h1 class="hidden">DailyHackrナビゲーション</h1>
 <div id="sidebar" class="rounding_bottom" role="complementary">
 <div id="sidebar_inner" class="rounding_bottom">
   <?php /* Widgetized sidebar, if you have the plugin installed. */ ?>
@@ -24,6 +25,7 @@
       <p>ライター/エディター/プログラマー/Webディレクター、hylomのブログです。ご興味のある方は<a href="http://twitter.com/hylom">つぶやき</a>や<a href="http://sourceforge.jp/magazine/search?tid=209">執筆記事</a>などもどうぞ。</p>
     </div>
 
+     <h2 class="hidden">カレンダー</h2>
     <div class="sidebar_calendar sidebar_text">
       <?php get_calendar(false); ?>
     </div>
