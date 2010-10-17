@@ -56,11 +56,11 @@
 	    <?php comments_popup_link("コメントを付ける", "コメントを見る", "コメントを見る", "", "コメント禁止" ); ?> | 
 
 	    <?php if (is_single()) : ?>
-	    <?php printf('<a href="%s">コメントRSS</a>', get_post_comments_feed_link()); ?>
+	    <?php printf('<a href="%s">コメントRSS</a>', get_post_comments_feed_link()); ?> | 
 	    <?php endif; ?>
 
 	    <?php if ( pings_open() ) { ?>
-	    | <?php printf('<a href="%s" rel="trackback">トラックバックURL</a>', trackback_url(false)) ?>
+	    <?php printf('<a href="%s" rel="trackback">トラックバックURL</a>', trackback_url(false)) ?>
 	    <?php } ?>
 	  </p>
 	  

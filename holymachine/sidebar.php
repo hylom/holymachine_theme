@@ -5,69 +5,78 @@
  */
 ?>
 <h1 class="hidden">DailyHackrナビゲーション</h1>
-<div id="sidebar" class="rounding_bottom" role="complementary">
-<div id="sidebar_inner" class="rounding_bottom">
-  <?php /* Widgetized sidebar, if you have the plugin installed. */ ?>
-  <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 
-    <div class="sidebar_search sidebar_text">
-      <h2 class="hidden">記事検索</h2>
-      <?php get_search_form(); ?>
-    </div>
+<div id="sidebar" role="complementary">
 
-    <!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
-	 <li><h2><?php _e('Author', 'kubrick'); ?></h2>
-	   <p>A little something about you, the author. Nothing lengthy, just an overview.</p>
-	 </li>
-	 -->
-    <div class="sidebar_profile sidebar_text">
-      <h2 class="hidden">About</h2>
-      <p>ライター/エディター/プログラマー/Webディレクター、hylomのブログです。ご興味のある方は<a href="http://twitter.com/hylom">つぶやき</a>や<a href="http://sourceforge.jp/magazine/search?tid=209">執筆記事</a>などもどうぞ。</p>
-    </div>
+  <div id="sidebarbox_1" class="sidebar_box rounding_bottom">
+    <div class="sidebar_inner rounding_bottom">
+      <?php /* Widgetized sidebar, if you have the plugin installed. */ ?>
+      <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar() ) : ?>
 
-     <h2 class="hidden">カレンダー</h2>
-    <div class="sidebar_calendar sidebar_text">
-      <?php get_calendar(false); ?>
-    </div>
+      <div class="sidebar_search sidebar_text">
+	<h2 class="hidden">記事検索</h2>
+	<?php get_search_form(); ?>
+      </div>
 
-    <div class="sidebar_resent sidebar_text">
-      <h2>最近の記事</h2>
-      <ul>
-	<?php wp_get_archives('type=postbypost&limit=10'); ?>
-      </ul>
-    </div>
+      <!-- Author information is disabled per default. Uncomment and fill in your details if you want to use it.
+	   <li><h2><?php _e('Author', 'kubrick'); ?></h2>
+	     <p>A little something about you, the author. Nothing lengthy, just an overview.</p>
+	   </li>
+	   -->
+      <div class="sidebar_profile sidebar_text">
+	<h2 class="hidden">About</h2>
+	<p>ライター/エディター/プログラマー/Webディレクター、hylomのブログです。ご興味のある方は<a href="http://twitter.com/hylom">つぶやき</a>や<a href="http://sourceforge.jp/magazine/search?tid=209">執筆記事</a>などもどうぞ。</p>
+      </div>
 
-    <div class="sidebar_archives sidebar_text">
-      <h2>過去の記事（過去12か月分）</h2>
-      <ul>
-	<?php wp_get_archives('type=monthly&limit=12'); ?>
-      </ul>
-    </div>
+      <h2 class="hidden">カレンダー</h2>
+      <div class="sidebar_calendar sidebar_text">
+	<?php get_calendar(false); ?>
+      </div>
 
-    <div class="sidebar_categories sidebar_text">
-      <h2>カテゴリ</h2>
-      <ul>
-	<?php wp_list_categories('show_count=1&title_li='); ?>
-      </ul>
-    </div>
+      <div class="sidebar_resent sidebar_text">
+	<h2>最近の記事</h2>
+	<ul>
+	  <?php wp_get_archives('type=postbypost&limit=10'); ?>
+	</ul>
+      </div>
+      
+      <div class="sidebar_archives sidebar_text">
+	<h2>過去の記事（過去12か月分）</h2>
+	<ul>
+	  <?php wp_get_archives('type=monthly&limit=12'); ?>
+	</ul>
+      </div>
+      
+      <div class="sidebar_categories sidebar_text">
+	<h2>カテゴリ</h2>
+	<ul>
+	  <?php wp_list_categories('show_count=1&title_li='); ?>
+	</ul>
+      </div>
+      
+      <div class="sidebar_categories sidebar_text">
+	<h2>タグ</h2>
+	<ul>
+	  <?php wp_tag_cloud('smallest=10&largest=10&orderby=count&order=DESC'); ?>
+	</ul>
+      </div>
 
-    <div class="sidebar_categories sidebar_text">
-      <h2>タグ</h2>
-      <ul>
-	<?php wp_tag_cloud('smallest=10&largest=10&orderby=count&order=DESC'); ?>
-      </ul>
-    </div>
+      <div class="sidebar_tools sidebar_text">
+	<h2>ツール</h2>
+	<ul>
+	  <?php wp_register(); ?>
+	  <li><?php wp_loginout(); ?></li>
+	  <?php wp_meta(); ?>
+	</ul>
+      </div>
+    </div><!-- end of .sidebar_inner -->
+  </div><!-- end of #sidebar_1 -->
 
-    <div class="sidebar_tools sidebar_text">
-      <h2>ツール</h2>
-      <ul>
-	<?php wp_register(); ?>
-	<li><?php wp_loginout(); ?></li>
-	<?php wp_meta(); ?>
-      </ul>
-    </div>
-
-    <div class="sidebar_freesoftwares sidebar_text">
+  
+  <div id="sidebarbox_2" class="sidebar_box rounding">
+    <div class="sidebar_inner rounding">
+       
+      <div class="sidebar_freesoftwares sidebar_text">
 
 	  <h2>愛用するフリーソフトウェア</h2>
 
@@ -121,9 +130,10 @@
 		
 	  </dl>
 	</div>
+    </div><!-- end of .sidebar_inner -->
+  </div><!-- end of #sidebar_2 -->
 
 
     <?php endif; ?>
-</div>
 </div><!-- end of sidebar -->
 
