@@ -173,8 +173,7 @@ p.entry-metadata a.more{
 #stories div.navigation_inner {
     border: 1px solid #3366CC;
     background: #FAFAFA;                      
-    padding: 0 20px;
-    text-align: center;
+    padding: 6px 20px;
 }
 #stories div.navigation { 
     background: rgba(100,100,100,0.5);
@@ -271,7 +270,7 @@ p.entry-metadata a.more{
 #comments_inner {
     border: 1px solid #3366CC;
     background: #FAFAFA;
-    padding: 0 20px;
+    padding: 8px 20px;
 }
 ol.commentlist {
     font-size: 90%;
@@ -281,6 +280,12 @@ ol.commentlist {
 }
 ol.commentlist li {
     margin-left: 30px;
+}
+
+.comments_header {
+    font-size: 120%;
+    padding: 8px 0px;
+    margin-bottom: 8px;
 }
 
 /* comment form */

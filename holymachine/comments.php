@@ -10,8 +10,8 @@
    die ('Please do not load this page directly. Thanks!');
    ?>
 
-<div id="comments" class="rounding_bottom">
-  <div id="comments_inner" class="rounding_bottom">
+<div id="comments" class="rounding">
+  <div id="comments_inner" class="rounding">
 
     <?php if ( post_password_required() ) { ?>
     <p class="nocomments">This post is password protected. Enter the password to view comments.</p> 
@@ -39,7 +39,7 @@
 
 
     <?php if ( comments_open() ) : ?>
-    <h3>コメントを投稿</h3>
+    <div class="comments_header">コメント：</div>
 
     <div id="cancel-comment-reply"> 
       <small><?php cancel_comment_reply_link() ?></small>
@@ -99,7 +99,7 @@
 
       <div class="form_submit">
 	<input name="submit" type="submit" id="submit" tabindex="5"
-	       value="<?php _e('Submit Comment', 'kubrick'); ?>" />
+	       value="コメントを投稿" />
 	<?php comment_id_fields(); ?> 
       </div>
 

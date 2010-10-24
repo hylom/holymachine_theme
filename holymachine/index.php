@@ -17,8 +17,8 @@
       <?php if (is_single() ) : ?>
       <div class="navigation rounding">
 	<div class="navigation_inner rounding">
-	  <div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
-	  <div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
+	  <div class="alignleft"><?php previous_post_link('前の記事：%link') ?></div>
+	  <div class="alignleft"><?php next_post_link('次の記事：%link') ?></div>
 	</div>
       </div>
       <?php endif; ?>
@@ -80,8 +80,8 @@
       <div class="navigation rounding">
 	<div class="navigation_inner rounding">
 	  <?php if (is_single() ) : ?>
-	  <div class="alignleft"><?php previous_post_link('&laquo; %link') ?></div>
-	  <div class="alignright"><?php next_post_link('%link &raquo;') ?></div>
+	  <div class="alignleft"><?php previous_post_link('前の記事：%link') ?></div>
+	  <div class="alignleft"><?php next_post_link('次の記事：%link') ?></div>
 	  <?php else: ?>
 	  <span class="older"><?php next_posts_link("<< 古い記事"); ?></span>
 	  <span class="newer"><?php previous_posts_link("新しい記事 >>"); ?></span>
