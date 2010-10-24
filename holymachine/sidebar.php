@@ -134,6 +134,32 @@
   </div><!-- end of #sidebar_2 -->
 
 
+  <div id="sidebarbox_3" class="sidebar_box rounding">
+    <div class="sidebar_inner rounding">
+      <div class="sidebar_links sidebar_text">
+	<h2>関連リンク：</h2>
+	<dl>
+
+	  <dt><a href="http://slashdot.jp/">Slashdot Japan</a></dt>
+	  <dd>セキュリティ関連からどうでもよいネタまで幅広く扱う雑談サイト</dd>
+
+	  <dt><a href="http://sourceforge.jp/magazine/">SourceForge.JP Magazine</a></dt>
+	  <dd>オープンソース関連ニュース/情報を掲載</dd>
+
+	  <dt><a href="http://sourceforge.jp/">SourceForge.JP</a></dt>
+	  <dd>オープンソースソフトウェア開発支援サイト。私も使っています</dd>
+
+	  <dt><a href="http://github.com/">GitHub</a></dt>
+	  <dd>公開Gitリポジトリ。こちらも愛用しています</dd>
+
+	  <dt><a href="http://vps.sakura.ad.jp/">さくらのVPS</a></dt>
+	  <dd>hylom.netはさくらのVPSサービスを利用してます</dd>
+
+
+	</dl>
+    </div><!-- end of .sidebar_inner -->
+  </div><!-- end of #sidebar_2 -->
+
     <?php endif; ?>
 </div><!-- end of sidebar -->
 
